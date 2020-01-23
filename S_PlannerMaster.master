@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="S_PlannerMaster.master.cs" Inherits="Syahs_Codes.S_PlannerMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 130px;
+            position: -webkit-sticky;
+            position: fixed;
+            z-index: 1;
+            top: 75px;
+            left: 0;
+            background-color: rgb(220,20,60, 0.2); /*(250,201,210___253,227,223__250,194,205)*/
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                color: black; /*#818181*/
+                display: block;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 130px; /* Same as the width of the sidenav */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+                top: 0;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form id="form1" runat="server">
+
+
+
+        <div class="sidenav" id="btnNew">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+        <div class="main">
+            
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</asp:Content>
+
+
+
+
